@@ -6,7 +6,7 @@
 
 ## Table of Contents:
   1. [Introduction](#Introduction)
-  2. [Technoly Stack](#TechnologyStack)
+  2. [Technology Stack](#TechnologyStack)
   3. [Features](#Features)
   4. [Screenshots and Video](#ScreenshotsandVideo)
   5. [Progress](#Progress)
@@ -14,7 +14,7 @@
 
 ## Introduction
   Intro of the project
-  
+
 ## Technology Stack
   1) Android
   2) Firebase
@@ -25,6 +25,11 @@
 
 ## Screenshots and Video
 
+[](hack36pic1.png)
+[](hack36pic2.png)
+[](hack36pic3.png)
+
+Working [Video](https://drive.google.com/file/d/166G1a1_eoa5DLRagqEn9I35GQg6jzbbc/view?usp=sharing) of the current progress
 
 ## Progress
 
