@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Record</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<style type="text/css">
+			img{
+				pointer-events: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			body{
+			/* background-image: url('https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.jumbotron{
+			background-color: rgb(208, 245, 199);
+		}
+		.roomNo{
+			color: green;
+		}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light navbar">
+		 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<!-- <a class="navbar-brand" href="/hostelData.html"><img src="images/supermarket.png"></a> -->
+		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			 	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			    	<li class="nav-item active">
+			        	<a class="nav-link" href="/hostelData">Hostel</a>
+			    	</li>
+			    </ul>
+			    <!-- <a href="/mybookings"><button class="btn btn-primary my-2 my-sm-0">Hi, <%=user.username%></button></a><br> -->
+				<a href="/"><button class="btn btn-primary my-2 my-sm-0"> Welcome Admin</button></a><br>
+				<a href="/new"><button class="btn btn-primary my-2 my-sm-0"> Add</button></a><br>
+			    <a href="/logout"><button class="btn btn-danger my-2 my-sm-0" type="submit">Logout</button></a>
+	  		</div>
+		</nav>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm"><center><h1>Record File</h1></center></div>
+				<div class="col-sm"></div>	
+			</div>
+			<br>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6">
+					<table class="table jumbotron">
+						<thead>
+							<th scope="col">Student Name</th>
+							<th scope="col">Semester</th>
+							<th scope="col">Phone Number</th>
+							<th scope="col">Room Number</th>
+						</thead>
+						<tbody>
+						<tr>
+							<!-- <td scope="row"><a href="/home/<%=students.id%>"><%=students.Name%></a></td>
+							<td><%=students.sem%></td>
+							<td><%=students.ar_time%></td>
+							<td><span class="badge badge-light"><span class="roomNo"><%=students.roomNo%></span></span></td> -->
+							<td scope="row">A</td>
+							<td>4</td>
+							<td>1234567890</td>
+							<td><span class="badge badge-light"> <span class="roomNo">402</span></span></td>
+						</tr>
+						<tr>
+							<td scope="row">B</td>
+							<td>2</td>
+							<td>5432167890</td>
+							<td><span class="badge badge-light"> <span class="roomNo">122</span></span></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col"></div>	
+			</div>
+		</div>	
+	</body>
+</html>

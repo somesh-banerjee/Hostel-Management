@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Add New </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style type="text/css">
+		img {
+			pointer-events: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		body {
+			/* background-image: url('https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.jumbotron {
+			background-color: rgb(208, 245, 199);
+		}
+
+		.roomNo {
+			color: green;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light navbar">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+			aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- <a class="navbar-brand" href="/hostelData.html"><img src="images/supermarket.png"></a> -->
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="/hostelData">Hostel Name</a>
+				</li>
+			</ul>
+			<!-- <a href="/mybookings"><button class="btn btn-primary my-2 my-sm-0">Hi, <%=user.username%></button></a><br> -->
+			<!-- <a href="/mybookings"><button class="btn btn-primary my-2 my-sm-0"> Welcome Admin</button></a><br> -->
+			<a href="/logout"><button class="btn btn-danger my-2 my-sm-0" type="submit">Logout</button></a>
+		</div>
+	</nav>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col">
+				<form action='/hostelData' method="POST">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="name">Student Name</label>
+							<input type="text" name="name" id="name" placeholder=" " required>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="airline">Enrollment Number</label>
+							<input type="text" name="enrol" id="enrol" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<!-- <div class="form-group"> -->
+						<div class="form-group col-md-4">
+							<label for="dp">Phone</label>
+							<input name="phone" id="ph" required>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="ar">Email</label>
+							<input name="email" id="em" required>
+						</div>
+
+						<!-- </div> -->
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="duration">Semester</label>
+							<input name="sem" id="sem" required>
+						</div>
+						<div class="col-4">
+							<label for="source">Year</label>
+							<input type="text" name="year" id="yr" placeholder=" " required>
+						</div>
+					</div>
+					<br>
+					<div class="form-row form-group">
+						<div class="col-4">
+							<label for="price">Room Number</label>
+							<input name="room" id="rmn" placeholder=" " required>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-row form-group">
+						<button class="btn btn-primary btn-block">Create</button>
+					</div>
+				</form>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+</body>
+
+</html>
