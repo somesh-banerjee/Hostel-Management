@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class Registration extends AppCompatActivity {
 
-    private EditText etname,etrollno,etemail,etpassword;
+    private EditText etname,etrollno,etemail,etpassword,etphone;
     private Button btnRegister,loginlink;
     private FirebaseAuth mFbAuth;
     private FirebaseFirestore fstore;
@@ -38,6 +38,7 @@ public class Registration extends AppCompatActivity {
         etrollno = findViewById(R.id.etRoll);
         btnRegister = findViewById(R.id.btnRegister);
         loginlink = findViewById(R.id.btnLoginlink);
+        etphone = findViewById(R.id.etphone);
 
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,7 @@ public class Registration extends AppCompatActivity {
                 String sroll = etrollno.getText().toString();
                 String semail = etemail.getText().toString();
                 String spassword = etpassword.getText().toString();
+                String sphone = etphone.getText().toString();
                 if(semail.isEmpty()){
                     etemail.setError("Enter Email ID");
                     etemail.requestFocus();
@@ -63,9 +65,17 @@ public class Registration extends AppCompatActivity {
                     etname.setError("Enter Password");
                     etname.requestFocus();
                 }
+                else if(sphone.isEmpty()){
+                    etphone.setError("Enter phone no");
+                    etphone.requestFocus();
+                }
                 else if(spassword.length() < 6){
                     etpassword.setError("Password length should be greater than 6");
                     etpassword.requestFocus();
+                }
+                else if(sphone.length()!=10){
+                    etphone.setError("Enter valid phone no");
+                    etphone.requestFocus();
                 }
                 else if(!(semail.isEmpty() && spassword.isEmpty())){
                     mFbAuth.createUserWithEmailAndPassword(semail,spassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
@@ -76,13 +86,14 @@ public class Registration extends AppCompatActivity {
                             }else{
                                 String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                                 fstore = FirebaseFirestore.getInstance();
-                                DocumentReference documentReference = fstore.collection("users")
+                                DocumentReference documentReference = fstore.collection("usersAll")
                                         .document(userID);
                                 Map<String, Object> user = new HashMap<>();
                                 user.put("FullName", sname);
                                 user.put("RollNo", sroll);
                                 user.put("Type","Student");
                                 user.put("Email", semail);
+                                user.put("Phone",sphone);
                                 documentReference.set(user);
 
                                 Intent i = new Intent(Registration.this,Login.class);
