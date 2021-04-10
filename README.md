@@ -25,9 +25,9 @@
 
 ## Screenshots and Video
 
-[](hack36pic1.png)
-[](hack36pic2.png)
-[](hack36pic3.png)
+![](hack36pic1.png)
+![](hack36pic2.png)
+![](hack36pic3.png)
 
 Working [Video](https://drive.google.com/file/d/166G1a1_eoa5DLRagqEn9I35GQg6jzbbc/view?usp=sharing) of the current progress
 
