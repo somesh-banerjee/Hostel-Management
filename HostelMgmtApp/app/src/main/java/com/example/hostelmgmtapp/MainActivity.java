@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         if(FirebaseAuth.getInstance().getCurrentUser() == null){
-            Intent intent = new Intent(MainActivity.this, Registration.class);
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             return;
         }
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-
+                        Toast.makeText(MainActivity.this,"Error Occured!",Toast.LENGTH_LONG).show();
                     }
                 });
         fStore.collection("usersVerified").document(userID).get()
@@ -69,14 +71,14 @@ public class MainActivity extends AppCompatActivity {
                         if(documentSnapshot.exists()){
                             dashboardRoomno.setText(documentSnapshot.getString("RoomNo"));
                         }else{
-                            dashboardRoomno.setText(documentSnapshot.getString("Room Not Allotted yet"));
+                            dashboardRoomno.setText("Room Not Allotted yet");
                         }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-
+                        Toast.makeText(MainActivity.this,"RoomNo not available!",Toast.LENGTH_LONG).show();
                     }
                 });
 

@@ -32,6 +32,7 @@ public class Login extends AppCompatActivity {
         etlpassword = findViewById(R.id.etLoginPassword);
         btnLogin = findViewById(R.id.btnLogin);
         Registerlink = findViewById(R.id.btnRegisterlink);
+        mFbAuth = FirebaseAuth.getInstance();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,7 @@ public class Login extends AppCompatActivity {
                             }
                             else {
                                 Intent i = new Intent(Login.this,MainActivity.class);
+                                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(i);
                             }
                         }

@@ -39,7 +39,7 @@ public class Registration extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         loginlink = findViewById(R.id.btnLoginlink);
         etphone = findViewById(R.id.etphone);
-
+        mFbAuth = FirebaseAuth.getInstance();
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +82,7 @@ public class Registration extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(Registration.this,"Register failed. Try Again!",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Registration.this,"Register failed. Try Again!",Toast.LENGTH_LONG).show();
                             }else{
                                 String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                                 fstore = FirebaseFirestore.getInstance();
@@ -96,7 +96,7 @@ public class Registration extends AppCompatActivity {
                                 user.put("Phone",sphone);
                                 documentReference.set(user);
 
-                                Intent i = new Intent(Registration.this,Login.class);
+                                Intent i = new Intent(Registration.this,MainActivity.class);
                                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(i);
                             }
