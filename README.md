@@ -19,6 +19,8 @@
   1) Android
   2) Firebase
   3) Firestore
+  4) NodeJS 
+  5) JavaScript
 
 ## Features
   - Hostellers profiles to interact with the Hostel Admin
@@ -32,6 +34,9 @@
 ![](hack36pic1.png)
 ![](hack36pic2.png)
 ![](hack36pic3.png)
+![](adminLogin.jpg)
+![](addStudent.jpg)
+![](studentRecord.jpg)
 
 Working [Video](https://drive.google.com/file/d/166G1a1_eoa5DLRagqEn9I35GQg6jzbbc/view?usp=sharing) of the current progress
 
@@ -47,8 +52,8 @@ Working [Video](https://drive.google.com/file/d/166G1a1_eoa5DLRagqEn9I35GQg6jzbb
 Team Name: sudo mv /* /dev/null
 
 * [Somesh Banerjee](https://github.com/somesh-banerjee)
-* [Suraj Jaiswal](https://github.com/)
-* [USP Anupam](https://github.com/)
+* [Suraj Jaiswal](https://github.com/surazjaiswal)
+* [USP Anupam](https://github.com/Anupam-USP)
 
 
 ### Made at:
