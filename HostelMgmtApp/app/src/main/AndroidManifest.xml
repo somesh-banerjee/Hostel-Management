@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HostelMgmtApp">
+        <activity android:name=".Market"></activity>
+        <activity android:name=".Friends" />
+        <activity android:name=".StudentInfoUpdate" />
+        <activity android:name=".Login" />
+        <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

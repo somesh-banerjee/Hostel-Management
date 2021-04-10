@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "137899654014",
+    "project_id": "hostelmgmt-bcc64",
+    "storage_bucket": "hostelmgmt-bcc64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137899654014:android:d36f134cad67ce83a5512f",
+        "android_client_info": {
+          "package_name": "com.example.hostelmgmtapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137899654014-qbqpg6lb4h3j2i68kelqo8772ana6ei4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOLMzRsefNrG4GMIW6w6KJd62etQUeGE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137899654014-qbqpg6lb4h3j2i68kelqo8772ana6ei4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
