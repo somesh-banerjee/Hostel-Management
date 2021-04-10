@@ -6,9 +6,9 @@
 
 ## Table of Contents:
   1. [Introduction](#Introduction)
-  2. [Technoly Stack](#Technology Stack)
+  2. [Technoly Stack](#TechnologyStack)
   3. [Features](#Features)
-  4. [Screenshots and Video](#Screenshots and Video)
+  4. [Screenshots and Video](#ScreenshotsandVideo)
   5. [Progress](#Progress)
   6. [Contributors](#Contributors)
 
